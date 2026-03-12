@@ -2,7 +2,7 @@ manifestVersion: 1
 id: qnm-opensoho
 name: OpenSOHO
 tagline: Lightweight network management for OpenWRT devices
-icon: https://raw.githubusercontent.com/rubenbe/opensoho/main/doc/opensoho.svg
+icon: https://raw.githubusercontent.com/rubenbe/opensoho/main/logo.svg
 category: Networking
 version: "0.10.1"
 port: 8090
@@ -27,7 +27,8 @@ submitter: qnm
 submission: https://github.com/qnm/umbrel-opensoho-store
 repo: https://github.com/rubenbe/opensoho
 support: https://github.com/rubenbe/opensoho/issues
-gallery: []
+gallery:
+  - https://raw.githubusercontent.com/opensoho/assets/074a4c5c353fcbb295e2da84fb3490869c6c4de0/devices.png
 releaseNotes: ""
 dependencies: []
 path: ""
