@@ -7,7 +7,7 @@ services:
       APP_PORT: 8090
 
   server:
-    image: ghcr.io/opensoho/opensoho:v0.10.2@sha256:6920224f999bd2d447cc10e447665ac5b526fa169bcf63d4a5b36e0bfa0d5a08
+    image: ghcr.io/opensoho/opensoho:v0.10.2
     command: "serve --http 0.0.0.0:8090"
     user: "1000:1000"
     init: true
