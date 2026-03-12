@@ -8,10 +8,13 @@ services:
 
   server:
     image: ghcr.io/opensoho/opensoho:v0.10.2
-    command: "serve --http 0.0.0.0:8090"
+    command: >
+      sh -c "./opensoho superuser upsert admin@opensoho.local \"$$APP_PASSWORD\" &&
+             ./opensoho serve --http 0.0.0.0:8090"
     init: true
     restart: on-failure
     environment:
-      OPENSOHO_SHARED_SECRET: $APP_SEED
+      OPENSOHO_SHARED_SECRET: $APP_PASSWORD
+      APP_PASSWORD: $APP_PASSWORD
     volumes:
       - ${APP_DATA_DIR}/data/pb_data:/ko-app/pb_data
