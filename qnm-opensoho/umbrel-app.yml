@@ -1,0 +1,35 @@
+manifestVersion: 1
+id: qnm-opensoho
+name: OpenSOHO
+tagline: Lightweight network management for OpenWRT devices
+icon: https://raw.githubusercontent.com/rubenbe/opensoho/main/doc/opensoho.svg
+category: Networking
+version: "0.10.1"
+port: 8090
+description: >-
+  OpenSOHO is a lightweight network management system for small office/home
+  office (SOHO) environments, designed to manage 2 to 20 OpenWRT-based network
+  devices. It is a simpler alternative to OpenWISP for networks that are too
+  small to need a full-blown controller.
+
+
+  Features include WiFi SSID configuration, radio frequency management, LED
+  configuration, device health monitoring, connected client tracking, VLAN
+  support, and Home Assistant REST API integration.
+
+
+  Compatible with openwisp-config and openwisp-monitoring packages on
+  OpenWRT 24.10.x DSA.
+
+developer: rubenbe
+website: https://github.com/rubenbe/opensoho
+submitter: qnm
+submission: https://github.com/qnm/umbrel-opensoho-store
+repo: https://github.com/rubenbe/opensoho
+support: https://github.com/rubenbe/opensoho/issues
+gallery: []
+releaseNotes: ""
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

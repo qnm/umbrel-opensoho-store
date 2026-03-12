@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: qnm-opensoho_server_1
+      APP_PORT: 8090
+
+  server:
+    image: ghcr.io/opensoho/opensoho:v0.10.1@sha256:6a274665c5ef58b62b7f43a85dbe2c91a6cc159cb516f00fde1fbc5296b762da
+    command: "serve --http 0.0.0.0:8090"
+    user: "1000:1000"
+    init: true
+    restart: on-failure
+    environment:
+      OPENSOHO_SHARED_SECRET: $APP_SEED
+    volumes:
+      - ${APP_DATA_DIR}/data/pb_data:/ko-app/pb_data
