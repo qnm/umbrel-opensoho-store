@@ -6,15 +6,24 @@ services:
       APP_HOST: qnm-opensoho_server_1
       APP_PORT: 8090
 
-  server:
+  init:
     image: ghcr.io/opensoho/opensoho:v0.10.2
-    command: >
-      sh -c "./opensoho superuser upsert admin@opensoho.local \"$$APP_PASSWORD\" &&
-             ./opensoho serve --http 0.0.0.0:8090"
-    init: true
-    restart: on-failure
+    command: ["superuser", "upsert", "admin@opensoho.local", "${APP_PASSWORD}"]
     environment:
       OPENSOHO_SHARED_SECRET: $APP_PASSWORD
       APP_PASSWORD: $APP_PASSWORD
+    volumes:
+      - ${APP_DATA_DIR}/data/pb_data:/ko-app/pb_data
+
+  server:
+    image: ghcr.io/opensoho/opensoho:v0.10.2
+    command: ["serve", "--http", "0.0.0.0:8090"]
+    init: true
+    restart: on-failure
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    environment:
+      OPENSOHO_SHARED_SECRET: $APP_PASSWORD
     volumes:
       - ${APP_DATA_DIR}/data/pb_data:/ko-app/pb_data
