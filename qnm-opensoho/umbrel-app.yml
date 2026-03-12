@@ -4,7 +4,7 @@ name: OpenSOHO
 tagline: Lightweight network management for OpenWRT devices
 icon: https://raw.githubusercontent.com/rubenbe/opensoho/main/logo.svg
 category: Networking
-version: "0.10.1"
+version: "0.10.2"
 port: 8090
 description: >-
   OpenSOHO is a lightweight network management system for small office/home

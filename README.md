@@ -9,7 +9,7 @@ A community app store for [umbrelOS](https://umbrel.com) containing the followin
 Lightweight network management system for small office/home office (SOHO) environments, designed to manage 2 to 20 OpenWRT-based network devices.
 
 - **Website:** https://github.com/rubenbe/opensoho
-- **Version:** 0.10.1
+- **Version:** 0.10.2
 
 ## Installation
 
