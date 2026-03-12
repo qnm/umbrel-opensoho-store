@@ -9,7 +9,6 @@ services:
   server:
     image: ghcr.io/opensoho/opensoho:v0.10.2
     command: "serve --http 0.0.0.0:8090"
-    user: "1000:1000"
     init: true
     restart: on-failure
     environment:
