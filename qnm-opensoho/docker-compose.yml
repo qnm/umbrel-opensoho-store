@@ -5,6 +5,7 @@ services:
     environment:
       APP_HOST: qnm-opensoho_server_1
       APP_PORT: 8090
+      PROXY_AUTH_WHITELIST: "/api/v1/*"
 
   init:
     image: ghcr.io/opensoho/opensoho:v0.10.2
