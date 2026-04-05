@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: qnm-kiwix_server_1
+      APP_PORT: 8080
+
+  init:
+    image: curlimages/curl:8.12.1
+    command:
+      - sh
+      - -c
+      - |
+        if [ -z "$(ls /data/*.zim 2>/dev/null)" ]; then
+          echo "No ZIM files found, downloading seed content..."
+          curl -fSL -o /data/gobyexample.com_en_all_2026-02.zim \
+            https://download.kiwix.org/zim/zimit/gobyexample.com_en_all_2026-02.zim
+        else
+          echo "ZIM files already present, skipping download."
+        fi
+    volumes:
+      - ${APP_DATA_DIR}/data/zim:/data
+
+  server:
+    image: ghcr.io/kiwix/kiwix-serve:3.8.2
+    command: ["sh", "-c", "kiwix-serve --port 8080 /data/*.zim"]
+    restart: on-failure
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    volumes:
+      - ${APP_DATA_DIR}/data/zim:/data

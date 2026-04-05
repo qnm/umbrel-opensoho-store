@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: qnm-kiwix
+name: Kiwix
+tagline: Offline access to Wikipedia and other knowledge content
+icon: https://raw.githubusercontent.com/kiwix/kiwix-desktop/main/resources/icons/kiwix-logo.svg
+category: Media
+version: "3.8.2"
+port: 8080
+description: >-
+  Kiwix Server lets you host and serve ZIM files — compressed snapshots of
+  websites like Wikipedia, Project Gutenberg, Stack Exchange, TED talks, and
+  more — entirely offline.
+
+
+  Drop .zim files into the data directory and Kiwix serves them through a
+  clean web interface accessible from any browser on your network. Perfect for
+  low-connectivity environments, educational setups, or simply having a local
+  copy of knowledge resources.
+
+
+  Download ZIM files from https://library.kiwix.org
+
+developer: Kiwix
+website: https://kiwix.org
+submitter: qnm
+submission: https://github.com/qnm/umbrel-opensoho-store
+repo: https://github.com/kiwix/kiwix-tools
+support: https://github.com/kiwix/kiwix-tools/issues
+gallery: []
+releaseNotes: ""
+dependencies: []
+path: ""
