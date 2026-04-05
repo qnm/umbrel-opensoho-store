@@ -25,7 +25,8 @@ services:
 
   server:
     image: ghcr.io/kiwix/kiwix-serve:3.8.2
-    command: ["sh", "-c", "kiwix-serve --port 8080 /data/*.zim"]
+    entrypoint: ["sh", "-c"]
+    command: ["exec kiwix-serve --port 8080 /data/*.zim"]
     restart: on-failure
     depends_on:
       init:
