@@ -4,7 +4,7 @@ name: OpenSOHO
 tagline: Lightweight network management for OpenWRT devices
 icon: https://raw.githubusercontent.com/rubenbe/opensoho/main/logo.svg
 category: Networking
-version: "0.10.2"
+version: "0.12.0"
 port: 8090
 description: >-
   OpenSOHO is a lightweight network management system for small office/home
@@ -29,7 +29,15 @@ repo: https://github.com/rubenbe/opensoho
 support: https://github.com/rubenbe/opensoho/issues
 gallery:
   - https://raw.githubusercontent.com/opensoho/assets/074a4c5c353fcbb295e2da84fb3490869c6c4de0/devices.png
-releaseNotes: ""
+releaseNotes: >-
+  v0.12.0: Adds usteer support for configuring roaming on select SSIDs, a basic
+  dashboard showing an overview of your setup (devices, clients, signal quality),
+  client vendor name lookup, and hostname validation for device names.
+
+
+  v0.11.0: Adds per-frequency-band WiFi SSID configuration via a new Wifi APs
+  table (backup pb_data before upgrading). Fixes hidden and isolate_clients SSID
+  configs. Updates PocketBase to v0.36.0.
 dependencies: []
 path: ""
 defaultUsername: "admin@opensoho.local"
