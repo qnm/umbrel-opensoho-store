@@ -21,6 +21,8 @@ services:
     command: ["serve", "--http", "0.0.0.0:8090"]
     init: true
     restart: on-failure
+    ports:
+      - "18090:8090"
     depends_on:
       init:
         condition: service_completed_successfully
