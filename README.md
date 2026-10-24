@@ -1,6 +1,6 @@
 # QNM Umbrel Community App Store
 
-A community app store for [umbrelOS](https://umbrel.com) containing the following app:
+A community app store for [umbrelOS](https://umbrel.com) containing the following apps:
 
 ## Apps
 
@@ -10,6 +10,13 @@ Lightweight network management system for small office/home office (SOHO) enviro
 
 - **Website:** https://github.com/rubenbe/opensoho
 - **Version:** 0.15.2
+
+### lldpd
+
+Runs LLDP on your Umbrel so switches and access points can see it. No web UI.
+
+- **Website:** https://lldpd.github.io
+- **Version:** 1.0.22
 
 ## Installation
 
