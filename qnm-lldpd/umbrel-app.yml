@@ -2,7 +2,7 @@ manifestVersion: 1
 id: qnm-lldpd
 category: networking
 name: lldpd
-version: "1.0.22"
+version: "1.0.22-patch.1"
 tagline: Announce your Umbrel to LLDP-aware switches and access points
 icon: https://avatars.githubusercontent.com/u/33911307?v=4
 description: >-
