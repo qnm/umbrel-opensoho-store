@@ -19,5 +19,5 @@ Add this app store to your Umbrel by entering the GitHub URL of this repository 
 
 - The `OPENSOHO_SHARED_SECRET` is automatically derived from your Umbrel's unique app seed, so it will be consistent across restarts but unique to your installation.
 - The admin account `admin@opensoho.local` is created on first launch. Its password is shown in Umbrel.
-- Point your OpenWRT devices at port `18090`, for example `http://<umbrel-ip>:18090`. Port `8090` goes through Umbrel's proxy, so OpenSOHO shows every device as `10.21.0.1`.
+- Point your OpenWRT devices at port `18090`, for example `http://<umbrel-ip>:18090`. Port `8090` is the web UI and requires your Umbrel login, so devices cannot use it.
 - PocketBase data is persisted in the app data directory.

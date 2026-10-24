@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: OpenSOHO
-version: "0.15.2-patch.1"
+version: "0.15.2-patch.2"
 tagline: Lightweight network management for OpenWRT devices
 icon: https://raw.githubusercontent.com/rubenbe/opensoho/main/logo.svg
 description: >-
@@ -28,13 +28,14 @@ description: >-
   Compatible with openwisp-config and openwisp-monitoring packages on
   OpenWRT 24.10.x DSA.
 releaseNotes: >-
+  Important: the OpenSOHO web UI now requires your Umbrel login. Devices can
+  no longer connect on port 8090. Before you update, point every OpenWRT
+  device at port 18090, for example http://<umbrel-ip>:18090.
+
+
   Important: VLAN interface names are now shorter, so OpenSOHO pushes new
   configuration to every device after this update. To roll out in stages,
   disable some APs before you update.
-
-
-  Devices showing 10.21.0.1 as their IP: point them at port 18090 instead of
-  8090, for example http://<umbrel-ip>:18090.
 
 
   - 6 GHz WiFi support, with better Wifi 7 and multi-radio handling
