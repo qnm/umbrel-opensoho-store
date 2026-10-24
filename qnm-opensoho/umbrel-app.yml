@@ -1,45 +1,66 @@
 manifestVersion: 1
 id: qnm-opensoho
+storage:
+  dataRoot: data
+category: networking
 name: OpenSOHO
+version: "0.15.2"
 tagline: Lightweight network management for OpenWRT devices
 icon: https://raw.githubusercontent.com/rubenbe/opensoho/main/logo.svg
-category: Networking
-version: "0.13.0"
-port: 8090
 description: >-
+  Sign in with the username and password shown in Umbrel. OpenWRT devices
+  connect to OpenSOHO with the shared secret, which is set to the same
+  password.
+
+
   OpenSOHO is a lightweight network management system for small office/home
   office (SOHO) environments, designed to manage 2 to 20 OpenWRT-based network
   devices. It is a simpler alternative to OpenWISP for networks that are too
   small to need a full-blown controller.
 
 
-  Features include WiFi SSID configuration, radio frequency management, LED
-  configuration, device health monitoring, connected client tracking, VLAN
-  support, and Home Assistant REST API integration.
+  Features include WiFi SSID configuration across 2.4, 5 and 6 GHz radios,
+  radio frequency management, LED configuration, device health monitoring,
+  connected client tracking, VLAN support, PoE and LLDP network overviews, and
+  Home Assistant integration.
 
 
   Compatible with openwisp-config and openwisp-monitoring packages on
   OpenWRT 24.10.x DSA.
+releaseNotes: >-
+  Important: VLAN interface names are now shorter, so OpenSOHO pushes new
+  configuration to every device after this update. To roll out in stages,
+  disable some APs before you update.
+
+
+  - 6 GHz WiFi support, with better Wifi 7 and multi-radio handling
+
+  - PoE and LLDP data from your devices, with a network overview
+
+  - Dashboard shows a frequency overview and AP WiFi versions
+
+  - Radio band is now selectable and checked against what the radio supports
+
+  - SSIDs and passwords that contain a quote no longer break device config
+
+  - Fixes for device registration and ethernet bridges on x86 VMs
+
+
+  Full release notes: https://github.com/rubenbe/opensoho/releases
 
 developer: rubenbe
 website: https://github.com/rubenbe/opensoho
-submitter: qnm
-submission: https://github.com/qnm/umbrel-opensoho-store
+dependencies: []
 repo: https://github.com/rubenbe/opensoho
 support: https://github.com/rubenbe/opensoho/issues
+
+port: 8090
 gallery:
   - https://raw.githubusercontent.com/opensoho/assets/074a4c5c353fcbb295e2da84fb3490869c6c4de0/devices.png
-releaseNotes: >-
-  v0.13.0: Better support for multiband wifi radios.
-
-  v0.12.0: Adds usteer support for configuring roaming on select SSIDs, a basic
-  dashboard showing an overview of your setup (devices, clients, signal quality),
-  client vendor name lookup, and hostname validation for device names.
-
-  v0.11.0: Adds per-frequency-band WiFi SSID configuration via a new Wifi APs
-  table (backup pb_data before upgrading). Fixes hidden and isolate_clients SSID
-  configs. Updates PocketBase to v0.36.0.
-dependencies: []
 path: ""
+
 defaultUsername: "admin@opensoho.local"
 deterministicPassword: true
+
+submitter: qnm
+submission: https://github.com/qnm/umbrel-opensoho-store
