@@ -5,6 +5,7 @@ services:
     image: ghcr.io/lldpd/lldpd:1.0.22@sha256:c12c113c432212b207e42d2a7caff81b22258c96858616c79c50af3c8fbb54c8
     network_mode: host
     uts: host
+    command: ["-I", "!wl*"]
     restart: on-failure
     cap_add:
       - NET_ADMIN
