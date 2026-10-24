@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: qnm-lldpd
+category: networking
+name: lldpd
+version: "1.0.22"
+tagline: Announce your Umbrel to LLDP-aware switches and access points
+icon: https://avatars.githubusercontent.com/u/33911307?v=4
+description: >-
+  lldpd runs LLDP on your Umbrel so switches, access points and tools like
+  OpenSOHO can see which port it is plugged into. It also lists the LLDP
+  neighbours your Umbrel can see.
+
+
+  This app has no web UI. To see neighbours, run
+  `sudo docker exec qnm-lldpd_lldpd_1 lldpcli show neighbors` on your Umbrel.
+releaseNotes: ""
+developer: Vincent Bernat
+website: https://lldpd.github.io
+dependencies: []
+repo: https://github.com/lldpd/lldpd
+support: https://github.com/lldpd/lldpd/issues
+port: 18091
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: qnm
+submission: https://github.com/qnm/umbrel-opensoho-store

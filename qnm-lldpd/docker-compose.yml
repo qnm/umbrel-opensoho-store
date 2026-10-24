@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  lldpd:
+    image: ghcr.io/lldpd/lldpd:1.0.22@sha256:c12c113c432212b207e42d2a7caff81b22258c96858616c79c50af3c8fbb54c8
+    network_mode: host
+    uts: host
+    restart: on-failure
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - /etc/os-release:/etc/os-release:ro
