@@ -5,7 +5,6 @@ services:
     environment:
       APP_HOST: qnm-opensoho_server_1
       APP_PORT: 8090
-      PROXY_AUTH_ADD: "false"
 
   init:
     image: ghcr.io/opensoho/opensoho:v0.15.2@sha256:8768e34a8197dba831a3ebec05f974b2d2f0a6cd775693efc0e70c834cfc319e
