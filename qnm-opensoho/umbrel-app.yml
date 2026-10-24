@@ -8,9 +8,9 @@ version: "0.15.2"
 tagline: Lightweight network management for OpenWRT devices
 icon: https://raw.githubusercontent.com/rubenbe/opensoho/main/logo.svg
 description: >-
-  Sign in with the username and password shown in Umbrel. OpenWRT devices
-  connect to OpenSOHO with the shared secret, which is set to the same
-  password.
+  Sign in with the username and password shown in Umbrel. Point your OpenWRT
+  devices at http://<umbrel-ip>:18090 so OpenSOHO sees their real IP
+  addresses. Their shared secret is the same password.
 
 
   OpenSOHO is a lightweight network management system for small office/home
@@ -31,6 +31,10 @@ releaseNotes: >-
   Important: VLAN interface names are now shorter, so OpenSOHO pushes new
   configuration to every device after this update. To roll out in stages,
   disable some APs before you update.
+
+
+  Devices showing 10.21.0.1 as their IP: point them at port 18090 instead of
+  8090, for example http://<umbrel-ip>:18090.
 
 
   - 6 GHz WiFi support, with better Wifi 7 and multi-radio handling
