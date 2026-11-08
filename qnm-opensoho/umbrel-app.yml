@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: networking
 name: OpenSOHO
-version: "0.15.2-patch.2"
+version: "0.16.0"
 tagline: Lightweight network management for OpenWRT devices
 icon: https://raw.githubusercontent.com/rubenbe/opensoho/main/logo.svg
 description: >-
@@ -33,22 +33,20 @@ releaseNotes: >-
   device at port 18090, for example http://<umbrel-ip>:18090.
 
 
-  Important: VLAN interface names are now shorter, so OpenSOHO pushes new
-  configuration to every device after this update. To roll out in stages,
-  disable some APs before you update.
+  - History of AP CPU and memory, and of WiFi client traffic and signal. It
+  is off by default. To turn it on, set history_retention_days in the
+  Settings collection to a value above 0, for example 7.
 
+  - Dashboard shows client signal quality as a line graph, with roaming and
+  connect events
 
-  - 6 GHz WiFi support, with better Wifi 7 and multi-radio handling
+  - Newer PocketBase (v0.40.5), with a better mobile layout and dark mode
 
-  - PoE and LLDP data from your devices, with a network overview
+  - DHCP reservations
 
-  - Dashboard shows a frequency overview and AP WiFi versions
+  - 6 GHz auto channel now uses PSC channels only
 
-  - Radio band is now selectable and checked against what the radio supports
-
-  - SSIDs and passwords that contain a quote no longer break device config
-
-  - Fixes for device registration and ethernet bridges on x86 VMs
+  - Fixes for device deletion and for WPA2 per-client PSKs on VLANs
 
 
   Full release notes: https://github.com/rubenbe/opensoho/releases
